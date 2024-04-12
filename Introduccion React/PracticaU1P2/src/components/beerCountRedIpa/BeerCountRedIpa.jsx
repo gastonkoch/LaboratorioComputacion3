@@ -5,7 +5,6 @@ let countIpa = 0;
 let countRed = 0;
 export const BeerCountRedIpa = ({beers}) => {
     beers.forEach(beer => {
-        console.log(beer.id)
         if(beer.beerStyle == "IPA"){
             countIpa++
         }

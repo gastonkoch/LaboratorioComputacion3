@@ -1,7 +1,9 @@
 import './App.css'
 import { BeerAvailable } from './components/beerAvailable/BeerAvailable';
 import { BeerCountRedIpa } from './components/beerCountRedIpa/BeerCountRedIpa';
+import { BeerStyle } from './components/beerStyle/BeerStyle';
 import { BeersList } from './components/beersList/BeersList';
+import { Products } from './components/products/Products';
 
 
 function App() {
@@ -70,6 +72,8 @@ function App() {
       available: false,
     },
   ];
+
+  const products = ["table","couch","chair1","chair2"];
   return (
       <div>
         {/* {beers.map((beer, i) => (
@@ -96,7 +100,8 @@ function App() {
           />
         ))} */}
         {/* <BeerCountRedIpa beers={beers}/> */}
-        
+        {/* <BeerStyle beers={beers}/> */}
+        <Products products={products}></Products>
       </div>
   )
 }
