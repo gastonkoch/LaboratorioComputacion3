@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Form, Button, Container } from 'react-bootstrap';
 import './ChangeDollar.css'
+import { propTypes } from 'react-bootstrap/esm/Image';
 
 const ChangeDollar = ({ onHandleChangeDollar }) => {
   // Recibimos del objeto padre Beers la funcion handleChangeDollar

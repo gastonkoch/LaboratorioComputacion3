@@ -3,6 +3,7 @@ import { Col, Container, Row, Card, Button } from "react-bootstrap";
 import './Beer.css'
 import ChangeDollar from '../changeDollar/ChangeDollar';
 import NewBeer from '../newBeer/NewBeer';
+import FilterBeers from '../filterBeers/FilterBeers';
 
 const Beers = () => {
     const beers = [
@@ -118,10 +119,16 @@ const Beers = () => {
         setBeerRefresh(prevBeers => [...prevBeers, newProduct]);
     }
 
-
-
+    const onBeersSearch = (beerEntered) => {
+        const beersSearch = beerRefresh.filter((beer) => (
+            beer.beerName.toLowerCase().includes(beerEntered.toLowerCase())
+        ));
+        console.log(beersSearch);
+        setBeerRefresh(beersSearch)
+    }
     return (
         <>
+            <FilterBeers beers={onBeersSearch}></FilterBeers>
             <Container className='border rounded bg-dark'>
                 <Row>
                     {beerRefresh.map((beer) => (
