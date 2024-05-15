@@ -1,0 +1,17 @@
+.finish {
+    color: grey;
+}
+
+.notFinish {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.marginButton {
+    margin-bottom: 10px;
+}
+
+.card {
+    width: '18rem';
+    margin-bottom: 20px;
+}
